@@ -334,10 +334,14 @@ html .clear-completed:active {
 .info {
 	margin: 65px auto 0;
 	color: #bfbfbf;
-	font-size: 30px;
+	font-size: 28px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	text-align: center;
 	line-height: 1em;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
 }
 
 .info p {
