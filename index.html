@@ -43,24 +43,84 @@
 				<button class="clear-completed">Clear completed</button>
 			</footer>
 		</section>
+		
 		<footer class="info">
-			
-		<p>
-			<!--"There are people 
+				
+		
+			<!--<p>"There are people 
         			who love you.
        				 Stop focusing on
        				 the ones who dont."
-  			  -->
-			“Love yourself first and
-			everything else falls 
-			into line. You really have
-			to love yourself to get
-			anything done in this world.”
-		</p>
+  			</p>  -->
+				<strong class="GeneratedText">
+					<script type="text/javascript">
+						document.write("<p>");
+						var day = new Date();
+						var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+						var weekqoute = ["x"];
+						var greeting = ["Good morning 🖤, ","Good afternoon 🖤, ","Good evening 🖤, ","صباح الخير 🖤،" , "مساء الخير🖤،"];
+						
+						var dayn = day.getDay();
+						var da = weekday[dayn];
+						var hr = day.getHours();
+						var ar =[false,true,false,true,false,true,false];
+						if (hr < 12){
+							if(ar[dayn])
+								document.write(greeting[0]);
+							else
+								document.write(greeting[3]);
+						}
+						else if (hr >= 12 && hr <= 17){
+    					    if(ar[dayn])
+								document.write(greeting[1]);
+							else
+								document.write(greeting[3]);
+						}
+						else if (hr >= 17 && hr <= 24){
+							if(ar[dayn])
+								document.write(greeting[2]);
+							else
+								document.write(greeting[4]);
+						}
+						// document.write("</p>");
+						// document.write("<p>");
+						weekqoute.push(" ‏عِجاف الأيّام يعقبها يوم الغوث وإن طَالت.");
+						//weekqoute.push(" Success is not final, failure is not fatal: it is the courage to continue that counts.");
+						weekqoute.push(" Your current situation is not your final destination. Keep on going.");
+						weekqoute.push(" إنما الحياة إنعكاس لرؤيتك لها.");
+						weekqoute.push(" What you get by achieving your goals is not as important as what you become by achieving your goals.");
+						weekqoute.push(" أما بعد فخورٌ بك. رغم خِضم كل الظروف لم تستسلمي قط.");
+						weekqoute.push(" Believe that you can and you're halfway there.");
+						weekqoute.push(" إنَّ الله معِك ويسمعك و يَراك، يعلمُ سرّك و جهرك ومع الله لا تخاف ولا تشقى.");
+						
+						// weekqoute.push("e");
+						// weekqoute.push("s");
+
+						if (da == "Sunday") {
+							document.write(weekqoute[1]);
+						} else if (da == "Monday") {
+							document.write(weekqoute[2]);
+						} else if (da == "Tuesday") {
+							document.write(weekqoute[3]);
+						} else if (da == "Wednesday") {
+							document.write(weekqoute[4]);
+						} else if (da == "Thursday") {
+							document.write( weekqoute[5]);
+						} else if (da == "Friday") {
+							document.write(weekqoute[6]);
+						} else if (da == "Saturday") {
+							document.write(weekqoute[7]);
+						}
+						document.write("</p>");
+					</script>
+				</strong>
+		
 		
 			<img class="resize" src="https://l.top4top.io/p_169936uov1.png">
 			<!-- <img src="https://f.top4top.io/p_1697bl7gb1.png"> -->
-			 
+			
+			
+			
 		</footer>
 		
 		<footer class="madein">
@@ -76,5 +136,6 @@
 		<script src="js/view.js"></script>
 		<script src="js/controller.js"></script>
 		<script src="js/app.js"></script>
+		
 	</body>
 </html>
