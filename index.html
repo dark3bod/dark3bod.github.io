@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-framework="javascript">
+<html dir="auto" lang="en" data-framework="javascript">
 	<head>
 		<meta charset="utf-8">
 		<title>to-do</title>
@@ -52,7 +52,8 @@
        				 Stop focusing on
        				 the ones who dont."
   			</p>  -->
-				<strong class="GeneratedText">
+			<input type="hidden" id="day101" >
+			<strong class="GeneratedText">
 					<script type="text/javascript">
 						document.write("<p>");
 						var day = new Date();
@@ -64,22 +65,33 @@
 						var da = weekday[dayn];
 						var hr = day.getHours();
 						var ar =[false,true,false,true,false,true,false];
+
+						document.getElementById("day101").value = dayn;
 						if (hr < 12){
 							if(ar[dayn])
 								document.write(greeting[0]);
 							else
+								document.write("<span dir=");
+								document.write("rtl");
+								document.write(">");
 								document.write(greeting[3]);
 						}
 						else if (hr >= 12 && hr <= 17){
     					    if(ar[dayn])
 								document.write(greeting[1]);
 							else
+								document.write("<span dir=");
+								document.write("rtl");
+								document.write(">");
 								document.write(greeting[3]);
 						}
 						else if (hr >= 17 && hr <= 24){
 							if(ar[dayn])
 								document.write(greeting[2]);
 							else
+								document.write("<span dir=");
+								document.write("rtl");
+								document.write(">");
 								document.write(greeting[4]);
 						}
 						// document.write("</p>");
@@ -112,13 +124,39 @@
 							document.write(weekqoute[7]);
 						}
 						document.write("</p>");
+						
 					</script>
 				</strong>
 		
-		
-			<img class="resize" src="https://l.top4top.io/p_169936uov1.png">
-			<!-- <img src="https://f.top4top.io/p_1697bl7gb1.png"> -->
 			
+			
+			<img id="id1" class="resize" src="https://l.top4top.io/p_169936uov1.png">
+			
+			<!-- <img src="https://f.top4top.io/p_1697bl7gb1.png"> -->
+			<script type="text/javascript">
+				var _img = document.getElementById("id1");
+						var newImg = new Image;
+						var dayno = document.getElementById("day101").value;
+						if(dayno == 0|| true)
+							newImg.src = "https://i.top4top.io/p_1702flkza1.gif";
+						else if(dayno == 1 || true)
+							newImg.src = "https://f.top4top.io/p_17022gokh1.gif";
+						else if(dayno == 2|| true)
+							newImg.src = "https://f.top4top.io/p_1702bmcne1.gif";
+						else if(dayno == 3|| true)
+							newImg.src = "https://b.top4top.io/p_17028f3c31.gif";
+						else if(dayno == 4|| true)
+							newImg.src = "https://l.top4top.io/p_1702fwoss1.gif";
+						else if(dayno == 5|| true)
+							newImg.src = "https://f.top4top.io/p_1702ctqdq1.png";
+						else if(dayno == 6|| true)
+							newImg.src = "https://b.top4top.io/p_17022qb821.gif";
+							
+							
+						newImg.onload = function() {
+    						_img.src = this.src;
+						}
+			</script>
 			
 			
 		</footer>
