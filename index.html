@@ -1,188 +1,197 @@
 <!doctype html>
 <html dir="auto" lang="en" data-framework="javascript">
-	<head>
-		<meta charset="utf-8">
-		<title>to-do</title>
-		<link rel="shortcut icon" type="image/x-icon" href="survey.svg" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-		<script type='text/javascript' charset='utf-8'>
- 		   // Hides mobile browser's address bar when page is done loading.
-  		    window.addEventListener('load', function(e) {
-  		      setTimeout(function() { window.scrollTo(0, 1); }, 1);
- 		     }, false);
-		</script>
-		<!--<link rel="stylesheet" href="base.css">-->
-		<link rel="stylesheet" href="index.css"> 
-	</head>
-	<body>
-		<section class="todoapp">
-			<header class="header">
-				<h1>todos</h1>
-				
-				<input class="new-todo" placeholder="What needs to be done?" autofocus>
-			</header>
-			<section class="main">
-				<input id="toggle-all" class="toggle-all" type="checkbox">
-				<label for="toggle-all">Mark all as complete</label>
-				<ul class="todo-list"></ul>
-			</section>
-			<footer class="footer">
-				<span class="todo-count"></span>
-				<ul class="filters">
-					<li>
-						<a href="#/" class="selected">All</a>
-					</li>
-					<li>
-						<a href="#/active">Active</a>
-					</li>
-					<li>
-						<a href="#/completed">Completed</a>
-					</li>
-				</ul>
-				<button class="clear-completed">Clear completed</button>
-			</footer>
+
+<head>
+	<meta charset="utf-8">
+	<title>to-do</title>
+	<link rel="shortcut icon" type="image/x-icon" href="survey.svg" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<script type='text/javascript' charset='utf-8'>
+		// Hides mobile browser's address bar when page is done loading.
+		window.addEventListener('load', function (e) {
+			setTimeout(function () {
+				window.scrollTo(0, 1);
+			}, 1);
+		}, false);
+	</script>
+	<!--<link rel="stylesheet" href="base.css">-->
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<section class="todoapp">
+		<header class="header">
+			<h1>todos</h1>
+
+			<input class="new-todo" placeholder="What needs to be done?" autofocus>
+		</header>
+		<section class="main">
+			<input id="toggle-all" class="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+			<ul class="todo-list"></ul>
 		</section>
-		
-		<footer class="info">
-				
-		
-			<!--<p>"There are people 
+		<footer class="footer">
+			<span class="todo-count"></span>
+			<ul class="filters">
+				<li>
+					<a href="#/" class="selected">All</a>
+				</li>
+				<li>
+					<a href="#/active">Active</a>
+				</li>
+				<li>
+					<a href="#/completed">Completed</a>
+				</li>
+			</ul>
+			<button class="clear-completed">Clear completed</button>
+		</footer>
+	</section>
+
+	<footer class="info">
+
+
+		<!--<p>"There are people 
         			who love you.
        				 Stop focusing on
        				 the ones who dont."
   			</p>  -->
-			<input type="hidden" id="day101" >
-			<strong class="GeneratedText">
-					<script type="text/javascript">
-						document.write("<p>");
-						var day = new Date();
-						var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-						var weekqoute = ["x"];
-						var greeting = ["Good morning 🖤, ","Good afternoon 🖤, ","Good evening 🖤, ","صباح الخير 🖤،" , "مساء الخير🖤،"];
-						
-						var dayn = day.getDay();
-						var da = weekday[dayn];
-						var hr = day.getHours();
-						var ar =[false,true,false,true,false,true,false];
-
-						document.getElementById("day101").value = dayn;
-						if (hr < 12){
-							if(ar[dayn])
-								document.write(greeting[0]);
-							else{
-								document.write("<span dir=");
-								document.write("rtl");
-								document.write(">");
-								document.write(greeting[3]);}
-						}
-						else if (hr >= 12 && hr < 15){
-    					    if(ar[dayn])
-								document.write(greeting[1]);
-							else{
-								document.write("<span dir=");
-								document.write("rtl");
-								document.write(">");
-								document.write(greeting[3]);}
-						}
-						else if (hr >= 15 && hr <= 17){
-							if(ar[dayn])
-								document.write(greeting[2]);
-							else{
-								document.write("<span dir=");
-								document.write("rtl");
-								document.write(">");
-								document.write(greeting[4]);}
-						}
-						else if (hr > 17 && hr <= 24){
-							if(ar[dayn])
-								document.write(greeting[2]);
-							else{
-								document.write("<span dir=");
-								document.write("rtl");
-								document.write(">");
-								document.write(greeting[4]);}
-						}
-						// document.write("</p>");
-						// document.write("<p>");
-						weekqoute.push(" ‏عِجاف الأيّام يعقبها يوم الغوث وإن طَالت.");
-						//weekqoute.push(" Success is not final, failure is not fatal: it is the courage to continue that counts.");
-						weekqoute.push(" Your current situation is not your final destination. Keep on going.");
-						weekqoute.push(" إنما الحياة إنعكاس لرؤيتك لها.");
-						weekqoute.push(" What you get by achieving your goals is not as important as what you become by achieving your goals.");
-						weekqoute.push(" أما بعد فخورٌ بك. رغم خِضم كل الظروف لم تستسلمي قط.");
-						weekqoute.push(" Believe that you can and you're halfway there.");
-						weekqoute.push(" إنَّ الله معِك ويسمعك و يَراك، يعلمُ سرّك و جهرك ومع الله لا تخاف ولا تشقى.");
-						
-						// weekqoute.push("e");
-						// weekqoute.push("s");
-
-						if (da == "Sunday") {
-							document.write(weekqoute[1]);
-						} else if (da == "Monday") {
-							document.write(weekqoute[2]);
-						} else if (da == "Tuesday") {
-							document.write(weekqoute[3]);
-						} else if (da == "Wednesday") {
-							document.write(weekqoute[4]);
-						} else if (da == "Thursday") {
-							document.write( weekqoute[5]);
-						} else if (da == "Friday") {
-							document.write(weekqoute[6]);
-						} else if (da == "Saturday") {
-							document.write(weekqoute[7]);
-						}
-						document.write("</p>");
-						
-					</script>
-				</strong>
-		
-			
-			
-			<img id="id1" class="resize" src="https://l.top4top.io/p_169936uov1.png">
-			
-			<!-- <img src="https://f.top4top.io/p_1697bl7gb1.png"> -->
+		<input type="hidden" id="day101">
+		<strong class="GeneratedText">
 			<script type="text/javascript">
-				var _img = document.getElementById("id1");
-						var newImg = new Image;
-						var dayno = document.getElementById("day101").value;
-						if(dayno == 0)
-							newImg.src = "https://i.top4top.io/p_1702flkza1.gif";
-						else if(dayno == 1)
-							newImg.src = "https://f.top4top.io/p_17022gokh1.gif";
-						else if(dayno == 2)
-							newImg.src = "https://f.top4top.io/p_1702bmcne1.gif";
-						else if(dayno == 3)
-							newImg.src = "https://b.top4top.io/p_17028f3c31.gif";
-						else if(dayno == 4)
-							newImg.src = "https://l.top4top.io/p_1702fwoss1.gif";
-						else if(dayno == 5)
-							newImg.src = "https://f.top4top.io/p_1702ctqdq1.png";
-						else if(dayno == 6)
-							newImg.src = "https://b.top4top.io/p_17022qb821.gif";
-							
-							
-						newImg.onload = function() {
-    						_img.src = this.src;
-						}
+				document.write("<p>");
+				var day = new Date("September 04, 2020 01:15:00");
+				var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var weekqoute = ["x"];
+				var greeting = ["Good morning 🖤, ", "Good afternoon 🖤, ", "Good evening 🖤, ", "صباح الخير 🖤،", "مساء الخير🖤،"];
+
+				var dayn = day.getDay();
+				var da = weekday[dayn];
+				var hr = day.getHours();
+				var ar = [false, true, false, true, false, true, false];
+
+				document.getElementById("day101").value = dayn;
+				if (hr < 12) {
+					if (ar[dayn])
+						document.write(greeting[0]);
+					else {
+						document.write("<span dir=");
+						document.write("rtl");
+						document.write(">");
+						document.write(greeting[3]);
+					}
+				} else if (hr >= 12 && hr < 15) {
+					if (ar[dayn])
+						document.write(greeting[1]);
+					else {
+						document.write("<span dir=");
+						document.write("rtl");
+						document.write(">");
+						document.write(greeting[3]);
+					}
+				} else if (hr >= 15 && hr <= 17) {
+					if (ar[dayn])
+						document.write(greeting[2]);
+					else {
+						document.write("<span dir=");
+						document.write("rtl");
+						document.write(">");
+						document.write(greeting[4]);
+					}
+				} else if (hr > 17 && hr <= 24) {
+					if (ar[dayn])
+						document.write(greeting[2]);
+					else {
+						document.write("<span dir=");
+						document.write("rtl");
+						document.write(">");
+						document.write(greeting[4]);
+					}
+				}
+				// document.write("</p>");
+				// document.write("<p>");
+				weekqoute.push(" ‏عِجاف الأيّام يعقبها يوم الغوث وإن طَالت.");
+				//weekqoute.push(" Success is not final, failure is not fatal: it is the courage to continue that counts.");
+				weekqoute.push(" Your current situation is not your final destination. Keep on going.");
+				weekqoute.push(" إنما الحياة إنعكاس لرؤيتك لها.");
+				weekqoute.push(" What you get by achieving your goals is not as important as what you become by achieving your goals.");
+				weekqoute.push(" أما بعد فخورٌ بك. رغم خِضم كل الظروف لم تستسلمي قط.");
+				weekqoute.push(" Believe that you can and you're halfway there.");
+				weekqoute.push(" إنَّ الله معِك ويسمعك و يَراك، يعلمُ سرّك و جهرك ومع الله لا تخاف ولا تشقى.");
+
+				// weekqoute.push("e");
+				// weekqoute.push("s");
+
+				if (da == "Sunday") {
+					document.write(weekqoute[1]);
+				} else if (da == "Monday") {
+					document.write(weekqoute[2]);
+				} else if (da == "Tuesday") {
+					document.write(weekqoute[3]);
+				} else if (da == "Wednesday") {
+					document.write(weekqoute[4]);
+				} else if (da == "Thursday") {
+					document.write(weekqoute[5]);
+				} else if (da == "Friday") {
+					document.write(weekqoute[6]);
+				} else if (da == "Saturday") {
+					document.write(weekqoute[7]);
+				}
+				document.write("</p>");
 			</script>
-			
-			
-		</footer>
-		
-		<footer class="madein">
-  			  <p><style>.heart{color:#e25555;}</style>
-				Made with <span class="heart">❤</span> by H∞A</p>
-		</footer>
-		
-		<script src="node_modules/todomvc-common/base.js"></script>
-		<script src="js/helpers.js"></script>
-		<script src="js/store.js"></script>
-		<script src="js/model.js"></script>
-		<script src="js/template.js"></script>
-		<script src="js/view.js"></script>
-		<script src="js/controller.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+		</strong>
+
+
+
+		<img id="id1" class="resize" src="https://l.top4top.io/p_169936uov1.png">
+
+		<!-- <img src="https://f.top4top.io/p_1697bl7gb1.png"> -->
+		<script type="text/javascript">
+			var _img = document.getElementById("id1");
+			var newImg = new Image;
+			var dayno = document.getElementById("day101").value;
+			if (dayno == 0)
+				newImg.src = "https://i.top4top.io/p_1702flkza1.gif";
+			else if (dayno == 1)
+				newImg.src = "https://f.top4top.io/p_17022gokh1.gif";
+			else if (dayno == 2)
+				newImg.src = "https://f.top4top.io/p_1702bmcne1.gif";
+			else if (dayno == 3)
+				newImg.src = "https://b.top4top.io/p_17028f3c31.gif";
+			else if (dayno == 4)
+				newImg.src = "https://l.top4top.io/p_1702fwoss1.gif";
+			else if (dayno == 5)
+				newImg.src = "https://f.top4top.io/p_1702ctqdq1.png";
+			else if (dayno == 6)
+				newImg.src = "https://b.top4top.io/p_17022qb821.gif";
+
+
+			newImg.onload = function () {
+				_img.src = this.src;
+			}
+		</script>
+
+
+	</footer>
+
+	<footer class="madein">
+		<style>
+			.heart {
+				color: #e25555;
+			}
+		</style>
+		Made with <span class="heart">❤</span> by H∞A
+	</footer>
+
+	<script src="node_modules/todomvc-common/base.js"></script>
+	<script src="js/helpers.js"></script>
+	<script src="js/store.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/view.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
 </html>
