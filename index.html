@@ -70,29 +70,38 @@
 						if (hr < 12){
 							if(ar[dayn])
 								document.write(greeting[0]);
-							else
+							else{
 								document.write("<span dir=");
 								document.write("rtl");
 								document.write(">");
-								document.write(greeting[3]);
+								document.write(greeting[3]);}
 						}
-						else if (hr >= 12 && hr <= 17){
+						else if (hr >= 12 && hr < 15){
     					    if(ar[dayn])
 								document.write(greeting[1]);
-							else
+							else{
 								document.write("<span dir=");
 								document.write("rtl");
 								document.write(">");
-								document.write(greeting[3]);
+								document.write(greeting[3]);}
 						}
-						else if (hr >= 17 && hr <= 24){
+						else if (hr >= 15 && hr <= 17){
 							if(ar[dayn])
 								document.write(greeting[2]);
-							else
+							else{
 								document.write("<span dir=");
 								document.write("rtl");
 								document.write(">");
-								document.write(greeting[4]);
+								document.write(greeting[4]);}
+						}
+						else if (hr > 17 && hr <= 24){
+							if(ar[dayn])
+								document.write(greeting[2]);
+							else{
+								document.write("<span dir=");
+								document.write("rtl");
+								document.write(">");
+								document.write(greeting[4]);}
 						}
 						// document.write("</p>");
 						// document.write("<p>");
